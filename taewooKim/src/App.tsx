@@ -1,5 +1,6 @@
 import Header from './components/Header.tsx';
 import MemberCard from './components/MemberCard.tsx'
+import InviteForm from './components/InviteForm.tsx'
 
 export default function App() {
   const taewoo = {
@@ -21,13 +22,12 @@ export default function App() {
   return (
     <div>
       <Header title="프론트엔드 스터디" memberCount={3} newMemberCount={0}/>
-      {/* <MemberCard name="김태우" field="프론트엔드" isLeader={true} isOnline={true}  */}
-        {/* // onGreet={handleGreet} onDelete={handleDelete}/> */}
       <MemberCard {...taewoo} onGreet={handleGreet} onDelete={handleDelete} />
       <MemberCard name="황재현" field="디자인" isLeader={false} isOnline={true} 
         onGreet={handleGreet} onDelete={handleDelete}/>
       <MemberCard name="김동주" isLeader={false} 
         onGreet={handleGreet} onDelete={handleDelete}/>
+      <InviteForm />
     </div>
   )
 }
