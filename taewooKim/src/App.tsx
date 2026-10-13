@@ -1,5 +1,6 @@
 import Header from './components/Header.tsx';
 import Button from './components/Button.tsx';
+import MemberCard from './components/MemberCard.tsx'
 
 export default function App() {
   const handleClick = () => {
@@ -14,6 +15,9 @@ export default function App() {
       <Button text="인사하기" variant="primary" onClick={handleClick} />
       <Button text="삭제" variant="danger" onClick={handleClick} />
       {/* <Button text="테스트" variant="blue" /> */}
+      <MemberCard name="김태우" field="프론트엔드" isLeader={true} isOnline={true} />
+      <MemberCard name="황재현" field="디자인" isLeader={false} isOnline={true} />
+      <MemberCard name="김동주" isLeader={false} />
     </div>
   )
 }
